@@ -27,7 +27,6 @@ def generate_gender_lists(file_path):
     # Return the lists of male and female students
     return male_students, female_students
 
-
 def list_students_with_special_characters(file_path):
     # Read the Excel file
     df = pd.read_excel(file_path)
@@ -52,6 +51,11 @@ file_path = 'Testfiles.xlsx'
 
 # Generate separate lists of male and female students
 male_students, female_students = generate_gender_lists(file_path)
+print('Male student  list:')
+print(male_students)
+print('Female student list:')
+print(female_students)
+
 
 # List the names of students with special characters
 students_with_special_chars = list_students_with_special_characters(file_path)
