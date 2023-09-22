@@ -40,7 +40,7 @@ def list_students_with_special_characters(file_path):
         student_name = str(row['Student Name']).strip()
 
         # Check if the student name contains special characters using regex
-        if re.search(r'[^\w\s-]', student_name):
+        if re.search(r"[a-zA-Z]+'[a-zA-Z]+", student_name):
             students_with_special_chars.append(student_name)
 
     # Return the list of students with special characters
@@ -59,3 +59,5 @@ print(female_students)
 
 # List the names of students with special characters
 students_with_special_chars = list_students_with_special_characters(file_path)
+print('Students with special characters')
+print(students_with_special_chars)
